@@ -9,11 +9,14 @@ namespace Tag
     {
         public const string box = "box";
         public const string boxProduction = "boxProduction";
+        public const string sixteenBoxProduction = "sixteenProduction";
+        public const string sixteenbox = "sixteenbox";
     }
 
     public class UI
     {
         public const string Condition = "Condition";
+        public const string sixteenCondition = "sixteenCondition";
     }
 }
 

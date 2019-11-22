@@ -7,6 +7,9 @@ TagManager:
   - box
   - boxProduction
   - Condition
+  - sixteenProduction
+  - sixteenbox
+  - sixteenCondition
   layers:
   - Default
   - TransparentFX
