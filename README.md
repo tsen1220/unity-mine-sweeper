@@ -12,3 +12,6 @@ Three Mode:
 10x10
 16x16
 30x30
+
+Example: 30x30
+<img src="https://raw.githubusercontent.com/tsen1220/UnityMineSweeper/master/IMG/introduction.jpg">
