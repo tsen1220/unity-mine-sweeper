@@ -10,5 +10,10 @@ namespace Tag
         public const string box = "box";
         public const string boxProduction = "boxProduction";
     }
+
+    public class UI
+    {
+        public const string Condition = "Condition";
+    }
 }
 

@@ -16,7 +16,6 @@ public class boxproduction : MonoBehaviour
 
 
  
-
     private void Awake()
     {  
         createBoard();

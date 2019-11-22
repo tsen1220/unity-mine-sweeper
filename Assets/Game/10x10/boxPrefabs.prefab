@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6043976623153197073}
   - component: {fileID: 6043976623153197072}
+  - component: {fileID: 8404012072441467569}
   - component: {fileID: 6043976623153197087}
-  - component: {fileID: 8182020627207284469}
   m_Layer: 0
   m_Name: boxPrefabs
   m_TagString: box
@@ -82,6 +82,30 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8404012072441467569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6043976623153197086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d289f5323c8e84648a9ba030348eb82c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mine: 0
+  emptyBoxElement:
+  - {fileID: 21300000, guid: e2f209e9adedb164a9ca6c65ebafe7fa, type: 3}
+  - {fileID: 21300000, guid: 3bb4dcccb9d4c5044ba9e57363f4a7ec, type: 3}
+  - {fileID: 21300000, guid: 7a4d6361feb85cb4fbceb7f175956381, type: 3}
+  - {fileID: 21300000, guid: f2c2cc76c9512f44886e18cf014ecdb8, type: 3}
+  - {fileID: 21300000, guid: 4d7a784bf0472104d92dce74c27a723a, type: 3}
+  - {fileID: 21300000, guid: 06bb50aeac919e846ad4349a68bd539b, type: 3}
+  - {fileID: 21300000, guid: 709d209dd9245654abe7faa90fd4ad9b, type: 3}
+  - {fileID: 21300000, guid: f1f13a6c7dc81be4994c23551df9d5ad, type: 3}
+  - {fileID: 21300000, guid: b9b6ac8462b225a43a28a4a8fb4a1f9a, type: 3}
+  mineElement: {fileID: 21300000, guid: a36883170c8d92b4992e59926c906ca5, type: 3}
 --- !u!61 &6043976623153197087
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -108,27 +132,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.2, y: 0.2}
   m_EdgeRadius: 0
---- !u!114 &8182020627207284469
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6043976623153197086}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d289f5323c8e84648a9ba030348eb82c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mine: 0
-  emptyBoxElement:
-  - {fileID: 21300000, guid: e2f209e9adedb164a9ca6c65ebafe7fa, type: 3}
-  - {fileID: 21300000, guid: 3bb4dcccb9d4c5044ba9e57363f4a7ec, type: 3}
-  - {fileID: 21300000, guid: 7a4d6361feb85cb4fbceb7f175956381, type: 3}
-  - {fileID: 21300000, guid: f2c2cc76c9512f44886e18cf014ecdb8, type: 3}
-  - {fileID: 21300000, guid: 4d7a784bf0472104d92dce74c27a723a, type: 3}
-  - {fileID: 21300000, guid: 06bb50aeac919e846ad4349a68bd539b, type: 3}
-  - {fileID: 21300000, guid: 709d209dd9245654abe7faa90fd4ad9b, type: 3}
-  - {fileID: 21300000, guid: f1f13a6c7dc81be4994c23551df9d5ad, type: 3}
-  - {fileID: 21300000, guid: b9b6ac8462b225a43a28a4a8fb4a1f9a, type: 3}
-  mineElement: {fileID: 21300000, guid: a36883170c8d92b4992e59926c906ca5, type: 3}
