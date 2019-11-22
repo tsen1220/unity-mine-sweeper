@@ -10,6 +10,9 @@ TagManager:
   - sixteenProduction
   - sixteenbox
   - sixteenCondition
+  - thirtybox
+  - thirtyProduction
+  - thirtyCondition
   layers:
   - Default
   - TransparentFX
