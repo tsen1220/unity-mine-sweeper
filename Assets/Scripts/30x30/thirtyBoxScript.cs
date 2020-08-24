@@ -198,5 +198,4 @@ public class thirtyBoxScript : MonoBehaviour
         }
         return true;
     }
-
 }

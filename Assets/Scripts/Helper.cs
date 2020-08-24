@@ -21,4 +21,3 @@ namespace Tag
         public const string thirtyCondition = "thirtyCondition";
     }
 }
-

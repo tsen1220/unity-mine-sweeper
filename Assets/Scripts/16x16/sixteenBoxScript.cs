@@ -64,7 +64,6 @@ public class sixteenBoxScript : MonoBehaviour
         {
             GetComponent<SpriteRenderer>().sprite = emptyBoxElement[adjacentCount];
         }
-
     }
 
     private bool isCovered()
@@ -159,9 +158,7 @@ public class sixteenBoxScript : MonoBehaviour
                 Yborder++;
                 Xborder = -1;
             }
-
         }
-
     }
 
     private void searchField()

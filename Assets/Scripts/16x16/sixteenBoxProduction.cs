@@ -38,5 +38,4 @@ public class sixteenBoxProduction : MonoBehaviour
             transform.position += new Vector3(0.32f, 0, 0);
         }
     }
-
 }
