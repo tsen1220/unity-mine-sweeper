@@ -13,7 +13,6 @@ public class thirtyBoxScript : MonoBehaviour
     public static int Horizon = 30;
     public static int Vertical = 30;
 
-
     private int Xpos;
     private int Ypos;
 
@@ -36,12 +35,11 @@ public class thirtyBoxScript : MonoBehaviour
         Xpos = Mathf.RoundToInt((transform.position.x - OriginXpos) / xMargin);
         Ypos = Mathf.RoundToInt((transform.position.y - OriginYpos) / yMargin);
         BoxProduction = GameObject.FindGameObjectWithTag(Tag.GameBox.thirtyBoxProduction).GetComponent<thirtyBoxProduction>();
-
         Condition = GameObject.FindGameObjectWithTag(Tag.UI.thirtyCondition).GetComponent<Text>();
         GameGrid = BoxProduction.Grid;
     }
 
-    void Update()
+    private void Update()
     {
         if (isFinished())
         {
@@ -62,20 +60,16 @@ public class thirtyBoxScript : MonoBehaviour
         {
             GetComponent<SpriteRenderer>().sprite = mineElement;
         }
-
         else
         {
             GetComponent<SpriteRenderer>().sprite = emptyBoxElement[adjacentCount];
         }
-
     }
 
-    bool isCovered()
+    private bool isCovered()
     {
         return GetComponent<SpriteRenderer>().sprite.texture.name == "box";
     }
-
-
 
     private void OnMouseUpAsButton()
     {
@@ -98,13 +92,11 @@ public class thirtyBoxScript : MonoBehaviour
                 breadthFirstSearch(Xpos, Ypos);
                 searchField();
                 loadElement(adjacentMines(Xpos, Ypos));
-
             }
         }
     }
 
-
-    void showAllMine()
+    private void showAllMine()
     {
         GameObject[] boxProduction = GameObject.FindGameObjectsWithTag(Tag.GameBox.thirtybox);
         foreach (GameObject Element in boxProduction)
@@ -113,27 +105,20 @@ public class thirtyBoxScript : MonoBehaviour
             {
                 Element.GetComponent<thirtyBoxScript>().loadElement(0);
             }
-
-
-
         }
-
     }
-    bool minePosition(int x, int y)
+
+    private bool minePosition(int x, int y)
     {
-
-
         if (x >= 0 && y >= 0 && x < Horizon && y < Vertical)
         {
             return GameGrid[x, y];
-
         }
 
         return false;
     }
 
-
-    int adjacentMines(int x, int y)
+    private int adjacentMines(int x, int y)
     {
         int count = 0;
 
@@ -149,7 +134,7 @@ public class thirtyBoxScript : MonoBehaviour
         return count;
     }
 
-    void breadthFirstSearch(int x, int y)
+    private void breadthFirstSearch(int x, int y)
     {
         int Xborder = -1;
         int Yborder = -1;
@@ -158,19 +143,13 @@ public class thirtyBoxScript : MonoBehaviour
         {
             if (Xborder < 2)
             {
-
-                if (Xborder == 0 && Yborder == 0)
-                {
-
-                }
-                else
+                if (Xborder != 0 || Yborder != 0)
                 {
                     if (x + Xborder >= 0 && y + Yborder >= 0)
                     {
                         breadthSearch.Enqueue(x + Xborder);
                         breadthSearch.Enqueue(y + Yborder);
                     }
-
                 }
                 Xborder++;
             }
@@ -179,12 +158,10 @@ public class thirtyBoxScript : MonoBehaviour
                 Yborder++;
                 Xborder = -1;
             }
-
         }
-
     }
 
-    void searchField()
+    private void searchField()
     {
         int X = breadthSearch.Dequeue();
         int Y = breadthSearch.Dequeue();
@@ -208,12 +185,9 @@ public class thirtyBoxScript : MonoBehaviour
             searchField();
         }
     }
-
-
-    bool isFinished()
+    
+    private bool isFinished()
     {
-
-
         GameObject[] boxProduction = GameObject.FindGameObjectsWithTag(Tag.GameBox.thirtybox);
         foreach (GameObject Element in boxProduction)
         {
@@ -224,4 +198,5 @@ public class thirtyBoxScript : MonoBehaviour
         }
         return true;
     }
+
 }

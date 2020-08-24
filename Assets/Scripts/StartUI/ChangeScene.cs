@@ -5,18 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour
 {
-
     public void Exit()
     {
         Application.Quit();
     }
 
-
     public void ExitGame()
     {
         SceneManager.LoadScene(0);
     }
-
 
     public void EnterTenGame()
     {
